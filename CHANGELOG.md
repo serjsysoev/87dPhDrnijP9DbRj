@@ -1,6 +1,6 @@
 <!-- Keep a Changelog guide -> https://keepachangelog.com -->
 
-# 87dPhDrnijP9DbRj Changelog
+# simple_inspection Changelog
 
 ## [Unreleased]
 ### Added
