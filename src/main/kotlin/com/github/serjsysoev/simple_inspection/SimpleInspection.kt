@@ -1,6 +1,5 @@
 package com.github.serjsysoev.simple_inspection
 
-import com.github.serjsysoev.MyBundle
 import com.intellij.codeInspection.*
 import com.intellij.psi.PsiFile
 import org.jetbrains.kotlin.idea.structuralsearch.visitor.KotlinRecursiveElementVisitor

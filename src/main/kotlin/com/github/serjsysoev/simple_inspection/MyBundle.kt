@@ -1,4 +1,4 @@
-package com.github.serjsysoev.87dphdrnijp9dbrj
+package com.github.serjsysoev.simple_inspection
 
 import com.intellij.DynamicBundle
 import org.jetbrains.annotations.NonNls
