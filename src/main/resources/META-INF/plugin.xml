@@ -1,18 +1,39 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
-    <id>com.github.serjsysoev.87dphdrnijp9dbrj</id>
-    <name>87dPhDrnijP9DbRj</name>
+    <id>com.github.serjsysoev.simple_inspection</id>
+    <name>Simple Inspection</name>
     <vendor>serjsysoev</vendor>
 
     <depends>com.intellij.modules.platform</depends>
+    <depends>org.jetbrains.kotlin</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="com.github.serjsysoev.87dphdrnijp9dbrj.services.MyApplicationService"/>
-        <projectService serviceImplementation="com.github.serjsysoev.87dphdrnijp9dbrj.services.MyProjectService"/>
+        <!--
+          Attributes:
+            language= Language ID
+            shortName= Not specified, will be computed by the underlying implementation classes.
+            displayName= The string to be shown in the Preferences | Editor | Inspections panel
+                The displayName gets registered to identify this inspection.
+                Can be localized using key= and bundle= attributes instead.
+            groupPath= Defines the outermost grouping for this inspection in
+                the Preferences | Editor | Inspections panel. Not localized.
+            groupBundle= Name of *.bundle file to translate groupKey.
+                In this case reuse an IntelliJ Platform bundle file from intellij.platform.resources.en
+            groupKey= Key to use for translation subgroup name using groupBundle file.
+                In this case reuse the IntelliJ Platform subcategory "Probable bugs"
+            enabledByDefault= Inspection state when Inspections panel is created.
+            level= The default level of error found by this inspection, e.g. INFO, ERROR, etc.
+                @see com.intellij.codeHighlighting.HighlightDisplayLevel
+            implementationClass= FQN of inspection implementation
+        -->
+        <localInspection language="kotlin"
+                         displayName="SDK: import used"
+                         groupPath="Kotlin"
+                         groupBundle="messages.InspectionsBundle"
+                         groupKey="group.names.probable.bugs"
+                         enabledByDefault="true"
+                         level="WARNING"
+                         implementationClass="com.github.serjsysoev.simple_inspection.SimpleInspection"/>
     </extensions>
 
-    <applicationListeners>
-        <listener class="com.github.serjsysoev.87dphdrnijp9dbrj.listeners.MyProjectManagerListener"
-                  topic="com.intellij.openapi.project.ProjectManagerListener"/>
-    </applicationListeners>
 </idea-plugin>
