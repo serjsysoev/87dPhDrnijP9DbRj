@@ -1,7 +1,14 @@
 # Simple Intellij plugin
 
-This plugin adds inspection, that marks all imports in kotlin files as warnings. Most of the code is taken from the
-JetBrains template, the only file that is interesting is SimpleInspection.kt. You can find the latest release in github releases.
+<!-- Plugin description -->
+
+This plugin adds inspection, that marks all imports in kotlin files as warnings. 
+
+<!-- Plugin description end -->
+
+Most of the code is taken from the
+JetBrains template, the only file that is interesting is SimpleInspection.kt. You can find the latest release in github
+releases.
 
 ## Bonus
 
